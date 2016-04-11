@@ -1,0 +1,13 @@
+*.o
+*.user
+*.suo
+*.sdf
+*.opensdf
+*.opendb
+*.lib
+*.obj
+*.exe
+/ipch
+/x64
+/Win32
+/Debug
