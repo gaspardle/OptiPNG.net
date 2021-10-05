@@ -1,17 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|x64">
       <Configuration>Release</Configuration>
@@ -19,118 +19,295 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B0815A53-058F-4D66-B911-7AB0AF8CB921}</ProjectGuid>
+    <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectGuid>{D121F9C2-7856-4E2F-BA91-3E7B83CD1043}</ProjectGuid>
+    <RootNamespace>optipng</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>optipng</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)\optipng\src\opngreduc;$(ProjectDir)\optipng\src\libpng;$(ProjectDir)\optipng\src\zlib;$(ProjectDir)\optipng\src\pngxtern;$(ProjectDir)\optipng\src\cexcept;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;ZLIB_WINAPI;ASMV;ASMINF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <AdditionalIncludeDirectories>K:\projets\optipng-nuget\optipng\src\zlib;K:\projets\optipng-nuget\optipng\src\cexcept;K:\projets\optipng-nuget\optipng\src\gifread;K:\projets\optipng-nuget\optipng\src\minitiff;K:\projets\optipng-nuget\optipng\src\libpng;K:\projets\optipng-nuget\optipng\src\pnmio;K:\projets\optipng-nuget\optipng\src\pngxtern;K:\projets\optipng-nuget\optipng\src\opngreduc;K:\projets\optipng-nuget\optipng\src\zlib\contrib\masmx86;K:\projets\optipng-nuget\optipng\src\zlib\contrib\masmx64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
     </ClCompile>
     <Link>
-      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
     </Link>
+    <MASM>
+      <ErrorReporting>3</ErrorReporting>
+    </MASM>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>$(ProjectDir)\optipng\src\opngreduc;$(ProjectDir)\optipng\src\libpng;$(ProjectDir)\optipng\src\zlib;$(ProjectDir)\optipng\src\pngxtern;$(ProjectDir)\optipng\src\cexcept;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;ZLIB_WINAPI;ASMV;ASMINF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <AdditionalIncludeDirectories>K:\projets\optipng-nuget\optipng\src\zlib;K:\projets\optipng-nuget\optipng\src\cexcept;K:\projets\optipng-nuget\optipng\src\gifread;K:\projets\optipng-nuget\optipng\src\minitiff;K:\projets\optipng-nuget\optipng\src\libpng;K:\projets\optipng-nuget\optipng\src\pnmio;K:\projets\optipng-nuget\optipng\src\pngxtern;K:\projets\optipng-nuget\optipng\src\opngreduc;K:\projets\optipng-nuget\optipng\src\zlib\contrib\masmx86;K:\projets\optipng-nuget\optipng\src\zlib\contrib\masmx64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
-      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
     </Link>
+    <MASM>
+      <ErrorReporting>3</ErrorReporting>
+    </MASM>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)\optipng\src\opngreduc;$(ProjectDir)\optipng\src\libpng;$(ProjectDir)\optipng\src\zlib;$(ProjectDir)\optipng\src\pngxtern;$(ProjectDir)\optipng\src\cexcept;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;ZLIB_WINAPI;ASMV;ASMINF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <AdditionalIncludeDirectories>K:\projets\optipng-nuget\optipng\src\zlib;K:\projets\optipng-nuget\optipng\src\cexcept;K:\projets\optipng-nuget\optipng\src\gifread;K:\projets\optipng-nuget\optipng\src\minitiff;K:\projets\optipng-nuget\optipng\src\libpng;K:\projets\optipng-nuget\optipng\src\pnmio;K:\projets\optipng-nuget\optipng\src\pngxtern;K:\projets\optipng-nuget\optipng\src\opngreduc;K:\projets\optipng-nuget\optipng\src\zlib\contrib\masmx86;K:\projets\optipng-nuget\optipng\src\zlib\contrib\masmx64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
     </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <MASM>
+      <ErrorReporting>3</ErrorReporting>
+    </MASM>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)\optipng\src\opngreduc;$(ProjectDir)\optipng\src\libpng;$(ProjectDir)\optipng\src\zlib;$(ProjectDir)\optipng\src\pngxtern;$(ProjectDir)\optipng\src\cexcept;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;ZLIB_WINAPI;ASMV;ASMINF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <AdditionalIncludeDirectories>K:\projets\optipng-nuget\optipng\src\zlib;K:\projets\optipng-nuget\optipng\src\cexcept;K:\projets\optipng-nuget\optipng\src\gifread;K:\projets\optipng-nuget\optipng\src\minitiff;K:\projets\optipng-nuget\optipng\src\libpng;K:\projets\optipng-nuget\optipng\src\pnmio;K:\projets\optipng-nuget\optipng\src\pngxtern;K:\projets\optipng-nuget\optipng\src\opngreduc;K:\projets\optipng-nuget\optipng\src\zlib\contrib\masmx86;K:\projets\optipng-nuget\optipng\src\zlib\contrib\masmx64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <MASM>
+      <ErrorReporting>3</ErrorReporting>
+    </MASM>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="optipng\src\optipng\bitset.c" />
-    <ClCompile Include="optipng\src\optipng\optim.c" />
-    <ClCompile Include="optipng\src\optipng\optipng.c" />
-    <ClCompile Include="optipng\src\optipng\osys.c" />
-    <ClCompile Include="optipng\src\optipng\ratio.c" />
-    <ClCompile Include="optipng\src\optipng\wildargs.c" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClInclude Include="optipng\src\cexcept\cexcept.h" />
+    <ClInclude Include="optipng\src\gifread\gifread.h" />
+    <ClInclude Include="optipng\src\libpng\png.h" />
+    <ClInclude Include="optipng\src\libpng\pngconf.h" />
+    <ClInclude Include="optipng\src\libpng\pngdebug.h" />
+    <ClInclude Include="optipng\src\libpng\pnginfo.h" />
+    <ClInclude Include="optipng\src\libpng\pnglibconf.h" />
+    <ClInclude Include="optipng\src\libpng\pngpriv.h" />
+    <ClInclude Include="optipng\src\libpng\pngstruct.h" />
+    <ClInclude Include="optipng\src\minitiff\minitiff.h" />
+    <ClInclude Include="optipng\src\opngreduc\opngreduc.h" />
     <ClInclude Include="optipng\src\optipng\bitset.h" />
+    <ClInclude Include="optipng\src\optipng\ioutil.h" />
     <ClInclude Include="optipng\src\optipng\optipng.h" />
-    <ClInclude Include="optipng\src\optipng\osys.h" />
     <ClInclude Include="optipng\src\optipng\proginfo.h" />
     <ClInclude Include="optipng\src\optipng\ratio.h" />
+    <ClInclude Include="optipng\src\pngxtern\pngxpriv.h" />
+    <ClInclude Include="optipng\src\pngxtern\pngxtern.h" />
+    <ClInclude Include="optipng\src\pngxtern\pngxutil.h" />
+    <ClInclude Include="optipng\src\pnmio\pnmio.h" />
+    <ClInclude Include="optipng\src\zlib\crc32.h" />
+    <ClInclude Include="optipng\src\zlib\deflate.h" />
+    <ClInclude Include="optipng\src\zlib\gzguts.h" />
+    <ClInclude Include="optipng\src\zlib\inffast.h" />
+    <ClInclude Include="optipng\src\zlib\inffixed.h" />
+    <ClInclude Include="optipng\src\zlib\inflate.h" />
+    <ClInclude Include="optipng\src\zlib\inftrees.h" />
+    <ClInclude Include="optipng\src\zlib\trees.h" />
+    <ClInclude Include="optipng\src\zlib\zconf.h" />
+    <ClInclude Include="optipng\src\zlib\zlib.h" />
+    <ClInclude Include="optipng\src\zlib\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="optipng\src\gifread\gifread.c" />
+    <ClCompile Include="optipng\src\libpng\png.c" />
+    <ClCompile Include="optipng\src\libpng\pngerror.c" />
+    <ClCompile Include="optipng\src\libpng\pngget.c" />
+    <ClCompile Include="optipng\src\libpng\pngmem.c" />
+    <ClCompile Include="optipng\src\libpng\pngpread.c" />
+    <ClCompile Include="optipng\src\libpng\pngread.c" />
+    <ClCompile Include="optipng\src\libpng\pngrio.c" />
+    <ClCompile Include="optipng\src\libpng\pngrtran.c" />
+    <ClCompile Include="optipng\src\libpng\pngrutil.c" />
+    <ClCompile Include="optipng\src\libpng\pngset.c" />
+    <ClCompile Include="optipng\src\libpng\pngtrans.c" />
+    <ClCompile Include="optipng\src\libpng\pngwio.c" />
+    <ClCompile Include="optipng\src\libpng\pngwrite.c" />
+    <ClCompile Include="optipng\src\libpng\pngwtran.c" />
+    <ClCompile Include="optipng\src\libpng\pngwutil.c" />
+    <ClCompile Include="optipng\src\libpng\arm\arm_init.c" />
+    <ClCompile Include="optipng\src\libpng\arm\filter_neon.S" />
+    <ClCompile Include="optipng\src\libpng\arm\filter_neon_intrinsics.c" />
+    <ClCompile Include="optipng\src\libpng\intel\filter_sse2_intrinsics.c" />
+    <ClCompile Include="optipng\src\libpng\intel\intel_init.c" />
+    <ClCompile Include="optipng\src\minitiff\tiffread.c" />
+    <ClCompile Include="optipng\src\minitiff\tiffutil.c" />
+    <ClCompile Include="optipng\src\minitiff\tiffwrite.c" />
+    <ClCompile Include="optipng\src\opngreduc\opngreduc.c" />
+    <ClCompile Include="optipng\src\optipng\bitset.c" />
+    <ClCompile Include="optipng\src\optipng\ioutil.c" />
+    <ClCompile Include="optipng\src\optipng\optim.c" />
+    <ClCompile Include="optipng\src\optipng\optipng.c" />
+    <ClCompile Include="optipng\src\optipng\ratio.c" />
+    <ClCompile Include="optipng\src\optipng\wildargs.c" />
+    <ClCompile Include="optipng\src\pngxtern\pngxio.c" />
+    <ClCompile Include="optipng\src\pngxtern\pngxmem.c" />
+    <ClCompile Include="optipng\src\pngxtern\pngxrbmp.c" />
+    <ClCompile Include="optipng\src\pngxtern\pngxread.c" />
+    <ClCompile Include="optipng\src\pngxtern\pngxrgif.c" />
+    <ClCompile Include="optipng\src\pngxtern\pngxrjpg.c" />
+    <ClCompile Include="optipng\src\pngxtern\pngxrpnm.c" />
+    <ClCompile Include="optipng\src\pngxtern\pngxrtif.c" />
+    <ClCompile Include="optipng\src\pngxtern\pngxset.c" />
+    <ClCompile Include="optipng\src\pnmio\pnmin.c" />
+    <ClCompile Include="optipng\src\pnmio\pnmout.c" />
+    <ClCompile Include="optipng\src\pnmio\pnmutil.c" />
+    <ClCompile Include="optipng\src\zlib\adler32.c">
+      <FileType>CCode</FileType>
+    </ClCompile>
+    <ClCompile Include="optipng\src\zlib\compress.c" />
+    <ClCompile Include="optipng\src\zlib\crc32.c" />
+    <ClCompile Include="optipng\src\zlib\deflate.c" />
+    <ClCompile Include="optipng\src\zlib\infback.c" />
+    <ClCompile Include="optipng\src\zlib\inffast.c" />
+    <ClCompile Include="optipng\src\zlib\inflate.c" />
+    <ClCompile Include="optipng\src\zlib\inftrees.c" />
+    <ClCompile Include="optipng\src\zlib\trees.c" />
+    <ClCompile Include="optipng\src\zlib\uncompr.c" />
+    <ClCompile Include="optipng\src\zlib\zutil.c" />
+    <ClCompile Include="optipng\src\zlib\contrib\masmx64\inffas8664.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="optipng\src\zlib\contrib\masmx64\gvmat64.asm">
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">gvmat64.lst</AssembledCodeListingFile>
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">gvmat64.lst</AssembledCodeListingFile>
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gvmat64.lst</AssembledCodeListingFile>
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gvmat64.lst</AssembledCodeListingFile>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </MASM>
+    <MASM Include="optipng\src\zlib\contrib\masmx64\inffasx64.asm">
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">inffasx64.lst</AssembledCodeListingFile>
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">inffasx64.lst</AssembledCodeListingFile>
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">inffasx64.lst</AssembledCodeListingFile>
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">inffasx64.lst</AssembledCodeListingFile>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </MASM>
+    <MASM Include="optipng\src\zlib\contrib\masmx86\inffas32.asm">
+      <FileType>CppCode</FileType>
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">inffas32.lst</AssembledCodeListingFile>
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">inffas32.lst</AssembledCodeListingFile>
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">inffas32.lst</AssembledCodeListingFile>
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">inffas32.lst</AssembledCodeListingFile>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</UseSafeExceptionHandlers>
+      <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</UseSafeExceptionHandlers>
+    </MASM>
+    <MASM Include="optipng\src\zlib\contrib\masmx86\match686.asm">
+      <FileType>Document</FileType>
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">match686.lst</AssembledCodeListingFile>
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">match686.lst</AssembledCodeListingFile>
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">match686.lst</AssembledCodeListingFile>
+      <AssembledCodeListingFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">match686.lst</AssembledCodeListingFile>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</UseSafeExceptionHandlers>
+      <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</UseSafeExceptionHandlers>
+    </MASM>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
   </ImportGroup>
 </Project>

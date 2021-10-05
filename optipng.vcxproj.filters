@@ -1,54 +1,380 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+      <UniqueIdentifier>{d082b583-0b9c-49fe-9cd4-ca5c5fa0f642}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <UniqueIdentifier>{df160e65-f315-4d30-865d-c4610db297ab}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+      <UniqueIdentifier>{77fc4c54-9f68-45d7-8388-4783d46dd318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{96d3fc70-e934-4a14-b1f2-fae13e7288ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src">
+      <UniqueIdentifier>{473d2913-29af-4586-a8fa-69abb6755382}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\cexcept">
+      <UniqueIdentifier>{a2173523-2f9e-4556-94aa-753de7dd42e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\gifread">
+      <UniqueIdentifier>{c90360ff-4a27-4b5b-a1b9-a0ad6daf1915}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\gifread\build">
+      <UniqueIdentifier>{8fa0b1c9-e9e8-45b6-85cb-8b19ea896e25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\gifread\img">
+      <UniqueIdentifier>{ad8d80a0-8384-4685-9a7d-67a3450d0e3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\gifread\test">
+      <UniqueIdentifier>{3e6cfaa4-0f98-43ea-9d70-7d6927d97976}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\libpng">
+      <UniqueIdentifier>{41dca0f5-8ac5-4803-b044-a78d818e63f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\minitiff">
+      <UniqueIdentifier>{320e537f-69c9-4716-9ead-1973347eb148}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\opngreduc">
+      <UniqueIdentifier>{fac2df42-94dd-4aba-a51f-41fe073bd3f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\optipng">
+      <UniqueIdentifier>{35255d5c-92d2-481c-873a-6cec92b00cd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\pngxtern">
+      <UniqueIdentifier>{a543841e-392b-452f-bf9f-74dbe7844873}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\pnmio">
+      <UniqueIdentifier>{94b49b0d-449e-4217-8b28-db7e17d98ab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\zlib">
+      <UniqueIdentifier>{97688830-9d75-46d3-af36-489704d12711}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0f476995-1e45-4562-9088-fda09ab44664}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{8bdce1b3-6c4b-4830-a17c-0ea61c042556}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\cexcept">
+      <UniqueIdentifier>{251bc297-43bf-4375-8acf-b14cd8308471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\gifread">
+      <UniqueIdentifier>{cceafbc8-864c-416e-a003-54504746aed0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\libpng">
+      <UniqueIdentifier>{2254e60e-07fa-4ae5-b81d-3e80f1357782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\libpng\arm">
+      <UniqueIdentifier>{b95865a1-3b63-4a47-8d17-7634a637c41a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\libpng\intel">
+      <UniqueIdentifier>{f16761f3-58eb-4a2f-a3e0-7e59684aee64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\minitiff">
+      <UniqueIdentifier>{d2f9273c-cb11-4dbc-8b3a-124a0e79d5d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\opngreduc">
+      <UniqueIdentifier>{10da037c-f4b1-45bd-a497-72112b82499d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\optipng">
+      <UniqueIdentifier>{3084f1bc-422f-4486-927b-99a760ffa463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\pngxtern">
+      <UniqueIdentifier>{e9970da3-991c-4fdd-a015-71fad4a7d38b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\pnmio">
+      <UniqueIdentifier>{b14fbbba-7f17-4d2c-9a66-2c46aa0346b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\zlib">
+      <UniqueIdentifier>{164ca205-8c75-4450-973b-ef06360325f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\zlib\contrib">
+      <UniqueIdentifier>{858c7984-9638-4648-9395-433adda6424d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\zlib\contrib\masmx64">
+      <UniqueIdentifier>{f3bef3ad-d97c-473c-b076-ed561d12cacd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\zlib\contrib\masmx86">
+      <UniqueIdentifier>{bad6ef06-7591-489e-ab73-7f02602f9915}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="optipng\src\cexcept\cexcept.h">
+      <Filter>Header Files\src\cexcept</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\gifread\gifread.h">
+      <Filter>Header Files\src\gifread</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\libpng\png.h">
+      <Filter>Header Files\src\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\libpng\pngconf.h">
+      <Filter>Header Files\src\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\libpng\pngdebug.h">
+      <Filter>Header Files\src\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\libpng\pnginfo.h">
+      <Filter>Header Files\src\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\libpng\pnglibconf.h">
+      <Filter>Header Files\src\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\libpng\pngpriv.h">
+      <Filter>Header Files\src\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\libpng\pngstruct.h">
+      <Filter>Header Files\src\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\minitiff\minitiff.h">
+      <Filter>Header Files\src\minitiff</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\opngreduc\opngreduc.h">
+      <Filter>Header Files\src\opngreduc</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\optipng\bitset.h">
+      <Filter>Header Files\src\optipng</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\optipng\ioutil.h">
+      <Filter>Header Files\src\optipng</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\optipng\optipng.h">
+      <Filter>Header Files\src\optipng</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\optipng\proginfo.h">
+      <Filter>Header Files\src\optipng</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\optipng\ratio.h">
+      <Filter>Header Files\src\optipng</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\pngxtern\pngxpriv.h">
+      <Filter>Header Files\src\pngxtern</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\pngxtern\pngxtern.h">
+      <Filter>Header Files\src\pngxtern</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\pngxtern\pngxutil.h">
+      <Filter>Header Files\src\pngxtern</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\pnmio\pnmio.h">
+      <Filter>Header Files\src\pnmio</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\zlib\crc32.h">
+      <Filter>Header Files\src\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\zlib\deflate.h">
+      <Filter>Header Files\src\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\zlib\gzguts.h">
+      <Filter>Header Files\src\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\zlib\inffast.h">
+      <Filter>Header Files\src\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\zlib\inffixed.h">
+      <Filter>Header Files\src\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\zlib\inflate.h">
+      <Filter>Header Files\src\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\zlib\inftrees.h">
+      <Filter>Header Files\src\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\zlib\trees.h">
+      <Filter>Header Files\src\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\zlib\zconf.h">
+      <Filter>Header Files\src\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\zlib\zlib.h">
+      <Filter>Header Files\src\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="optipng\src\zlib\zutil.h">
+      <Filter>Header Files\src\zlib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="optipng\src\gifread\gifread.c">
+      <Filter>Source Files\src\gifread</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\png.c">
+      <Filter>Source Files\src\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\pngerror.c">
+      <Filter>Source Files\src\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\pngget.c">
+      <Filter>Source Files\src\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\pngmem.c">
+      <Filter>Source Files\src\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\pngpread.c">
+      <Filter>Source Files\src\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\pngread.c">
+      <Filter>Source Files\src\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\pngrio.c">
+      <Filter>Source Files\src\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\pngrtran.c">
+      <Filter>Source Files\src\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\pngrutil.c">
+      <Filter>Source Files\src\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\pngset.c">
+      <Filter>Source Files\src\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\pngtrans.c">
+      <Filter>Source Files\src\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\pngwio.c">
+      <Filter>Source Files\src\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\pngwrite.c">
+      <Filter>Source Files\src\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\pngwtran.c">
+      <Filter>Source Files\src\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\pngwutil.c">
+      <Filter>Source Files\src\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\arm\arm_init.c">
+      <Filter>Source Files\src\libpng\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\arm\filter_neon.S">
+      <Filter>Source Files\src\libpng\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\arm\filter_neon_intrinsics.c">
+      <Filter>Source Files\src\libpng\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\intel\filter_sse2_intrinsics.c">
+      <Filter>Source Files\src\libpng\intel</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\libpng\intel\intel_init.c">
+      <Filter>Source Files\src\libpng\intel</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\minitiff\tiffread.c">
+      <Filter>Source Files\src\minitiff</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\minitiff\tiffutil.c">
+      <Filter>Source Files\src\minitiff</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\minitiff\tiffwrite.c">
+      <Filter>Source Files\src\minitiff</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\opngreduc\opngreduc.c">
+      <Filter>Source Files\src\opngreduc</Filter>
+    </ClCompile>
     <ClCompile Include="optipng\src\optipng\bitset.c">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\src\optipng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\optipng\ioutil.c">
+      <Filter>Source Files\src\optipng</Filter>
     </ClCompile>
     <ClCompile Include="optipng\src\optipng\optim.c">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\src\optipng</Filter>
     </ClCompile>
     <ClCompile Include="optipng\src\optipng\optipng.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="optipng\src\optipng\osys.c">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\src\optipng</Filter>
     </ClCompile>
     <ClCompile Include="optipng\src\optipng\ratio.c">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\src\optipng</Filter>
     </ClCompile>
     <ClCompile Include="optipng\src\optipng\wildargs.c">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\src\optipng</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\pngxtern\pngxio.c">
+      <Filter>Source Files\src\pngxtern</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\pngxtern\pngxmem.c">
+      <Filter>Source Files\src\pngxtern</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\pngxtern\pngxrbmp.c">
+      <Filter>Source Files\src\pngxtern</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\pngxtern\pngxread.c">
+      <Filter>Source Files\src\pngxtern</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\pngxtern\pngxrgif.c">
+      <Filter>Source Files\src\pngxtern</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\pngxtern\pngxrjpg.c">
+      <Filter>Source Files\src\pngxtern</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\pngxtern\pngxrpnm.c">
+      <Filter>Source Files\src\pngxtern</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\pngxtern\pngxrtif.c">
+      <Filter>Source Files\src\pngxtern</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\pngxtern\pngxset.c">
+      <Filter>Source Files\src\pngxtern</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\pnmio\pnmin.c">
+      <Filter>Source Files\src\pnmio</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\pnmio\pnmout.c">
+      <Filter>Source Files\src\pnmio</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\pnmio\pnmutil.c">
+      <Filter>Source Files\src\pnmio</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\zlib\adler32.c">
+      <Filter>Source Files\src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\zlib\compress.c">
+      <Filter>Source Files\src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\zlib\crc32.c">
+      <Filter>Source Files\src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\zlib\deflate.c">
+      <Filter>Source Files\src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\zlib\infback.c">
+      <Filter>Source Files\src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\zlib\inffast.c">
+      <Filter>Source Files\src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\zlib\inflate.c">
+      <Filter>Source Files\src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\zlib\inftrees.c">
+      <Filter>Source Files\src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\zlib\trees.c">
+      <Filter>Source Files\src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\zlib\uncompr.c">
+      <Filter>Source Files\src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\zlib\zutil.c">
+      <Filter>Source Files\src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="optipng\src\zlib\contrib\masmx64\inffas8664.c">
+      <Filter>Source Files\src\zlib\contrib\masmx64</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="optipng\src\optipng\bitset.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="optipng\src\optipng\optipng.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="optipng\src\optipng\osys.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="optipng\src\optipng\proginfo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="optipng\src\optipng\ratio.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <MASM Include="optipng\src\zlib\contrib\masmx86\inffas32.asm">
+      <Filter>Source Files\src\zlib\contrib\masmx86</Filter>
+    </MASM>
+    <MASM Include="optipng\src\zlib\contrib\masmx86\match686.asm">
+      <Filter>Source Files\src\zlib\contrib\masmx86</Filter>
+    </MASM>
+    <MASM Include="optipng\src\zlib\contrib\masmx64\gvmat64.asm">
+      <Filter>Source Files\src\zlib\contrib\masmx64</Filter>
+    </MASM>
+    <MASM Include="optipng\src\zlib\contrib\masmx64\inffasx64.asm">
+      <Filter>Source Files\src\zlib\contrib\masmx64</Filter>
+    </MASM>
   </ItemGroup>
 </Project>

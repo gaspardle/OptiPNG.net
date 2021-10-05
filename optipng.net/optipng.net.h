@@ -9,11 +9,11 @@ namespace OptiPNGNet {
 
     public ref class OptiPNGOptions
     {
-    protected:
-      
+    internal:
+        opng_options* options_internal;
 
     public:
-        opng_options* options;
+        
         OptiPNGOptions();
         !OptiPNGOptions();
         ~OptiPNGOptions();       
@@ -23,10 +23,10 @@ namespace OptiPNGNet {
         /// </summary>   
         property int OptimizationLevel {
             int get() {
-                return options->optim_level;
+                return options_internal->optim_level;
             }
             void set(int value) {
-                options->optim_level = value;
+                options_internal->optim_level = value;
             }        
         }
 
@@ -37,23 +37,67 @@ namespace OptiPNGNet {
         /// </summary>   
         property bool Interlace {
             bool get() {
-                return options->interlace != 1;
+                return options_internal->interlace != 1;
             }
             void set(bool value) {
-                options->interlace = 1;
+                options_internal->interlace = value;
             }
         }
 
         /// <summary>
         /// Enforce writing of a new output file.
-        /// This option overrides the program’s decision not to write such file,        /// e.g. when the PNG input is digitally signed (using dSIG), or when the         /// PNG output becomes larger than the PNG input.
+        /// This option overrides the program’s decision not to write such file,
+        /// e.g. when the PNG input is digitally signed (using dSIG), or when the 
+        /// PNG output becomes larger than the PNG input.
         /// </summary>        
         property bool Force {
             bool get() {
-                return options->force != 1;
+                return options_internal->force != 1;
             }
             void set(bool value) {
-                options->force = 1;
+                options_internal->force = value;
+            }
+        }
+        property bool Overwrite {
+            bool get() {
+                return options_internal->clobber != 1;
+            }
+            void set(bool value) {
+                options_internal->clobber = value;
+            }
+        }
+        property bool Simulate {
+            bool get() {
+                return options_internal->simulate != 1;
+            }
+            void set(bool value) {
+                options_internal->simulate = value;
+            }
+        }
+        property bool Strip {
+            bool get() {
+                return options_internal->strip_all != 1;
+            }
+            void set(bool value) {
+                options_internal->strip_all = value;
+            }
+        }
+
+        property bool Snip {
+            bool get() {
+                return options_internal->snip != 1;
+            }
+            void set(bool value) {
+                options_internal->snip = value;
+            }
+        }
+
+        property bool Fix {
+            bool get() {
+                return options_internal->fix != 1;
+            }
+            void set(bool value) {
+                options_internal->fix = value;
             }
         }
     };
@@ -66,8 +110,6 @@ namespace OptiPNGNet {
         public:
             OptiPNG(OptiPNGOptions^ options);
             System::Boolean ProcessFile(System::String^ infilename, System::String^ filename);
-           
-            
 	};
 
 

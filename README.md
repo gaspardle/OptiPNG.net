@@ -1,4 +1,4 @@
-OptiPng.Net
+OptiPNG.Net
 ============
 
 Use OptiPNG from .Net without any others external dependencies.
@@ -7,6 +7,7 @@ Use OptiPNG from .Net without any others external dependencies.
 
 > [OptiPNG: Advanced PNG Optimizer](http://optipng.sourceforge.net/)
 
+Not threadsafe
 
 Usage
 ---------------------
@@ -21,4 +22,3 @@ TODO
 ---------------------
  - error handling
  - nuget package
- - Appveyor
